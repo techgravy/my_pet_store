@@ -21,6 +21,12 @@ export default new Vuex.Store({
     },
     removeFromFavorites({ commit }, payload) {
       commit("removeFromFavorites", payload);
+    },
+    clearFavorites(state) {
+      state.favorites = [];
+    },
+    clearFavorites({ commit }) {
+      commit("clearFavorites");
     }
   },
   actions: {
